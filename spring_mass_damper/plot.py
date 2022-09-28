@@ -48,7 +48,7 @@ def plot(zeta, time, omega_n, initial, alpha):
             axs[i].plot(
                 time,
                 create_data_points(time, zeta[i], omega_n[j], omega_d, initial, alpha),
-                label=f'omega_n = {omega_n[j]}'
+                label=f'$\omega_n$ = {omega_n[j]}'
             )
         axs[i].legend(loc='upper right')
         axs[i].set_title(f'Damping ratio = {zeta[i]}')
