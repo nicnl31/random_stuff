@@ -10,4 +10,4 @@ def dynamic_fib(n, memo = {}):
         memo[n] = result
         return result
 
-print(fastFib(998))
+print(dynamic_fib(998))
