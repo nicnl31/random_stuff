@@ -6,7 +6,7 @@ def dynamic_fib(n, memo = {}):
     try:
         return memo[n]
     except KeyError:
-        result = fastFib(n-1, memo) + fastFib(n-2, memo)
+        result = dynamic_fib(n-1, memo) + dynamic_fib(n-2, memo)
         memo[n] = result
         return result
 
