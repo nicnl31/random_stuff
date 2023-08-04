@@ -24,9 +24,7 @@ def gradient_vector(
 
     # Update the gradient vector according to f(X)
     grad_X[0] = 1/16 * (2 * X[0] + 2 * (X[0] - X[1]) - 2) + mu * np.linalg.norm(X, ord=1) * X[0]/abs(X[0])
-    print(grad_X[0])
     grad_X[-1] = 1/16 * (-2 * (X[-2] - X[-1])) + mu * np.linalg.norm(X, ord=1) * X[-1]/abs(X[-1])
-    print(grad_X[-1])
     for i in range(1, dimension-1):
         grad_X[i] = -2 * (X[i-1] - X[i]) + 2 * (X[i] - X[i+1]) + mu * np.linalg.norm(X, ord=1) * X[i]/abs(X[i])
 
